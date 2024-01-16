@@ -1,4 +1,5 @@
-- Execute este comando via docker para criar um container de mysql:
+Execute este comando via docker para criar um container de mysql:
+
 1 - docker run -p 30000:3306 -d -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=contrus mysql:8.2
 
 2 - Use o vscode para executar o projeto.
