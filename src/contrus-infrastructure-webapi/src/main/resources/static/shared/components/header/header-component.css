@@ -1,0 +1,53 @@
+
+#container-header-component{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 7vh;
+    background-color: rgb(16, 52, 73);
+}
+
+#logo-header-component{
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 20px;
+}
+
+#menu-header-component{
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#cadastrar-colaborador-header-component{
+    margin-right: 50px;
+}
+
+a {
+    color: inherit; /* Faz com que o link use a cor de texto do elemento pai */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+a:visited {
+    color: inherit; /* Remove a cor de destaque para links visitados */
+}
+
+a:hover,
+a:focus {
+    text-decoration: none; /* Remove o sublinhado (se houver) ao passar o mouse, focar ou clicar */
+    color: inherit; /* Mantém a cor inalterada ao interagir */
+}
+
+a:active {
+    color: blue; /* Muda a cor do texto durante o clique */
+    background-color: lightgray; /* Adiciona um fundo ao link durante o clique */
+    text-decoration: underline; /* Adiciona sublinhado durante o clique */
+}

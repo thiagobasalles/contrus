@@ -1,0 +1,35 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sua Aplicação AngularJS</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.min.js"></script>
+    <script>
+        var app = angular.module('app', ['ngRoute']);
+    </script>
+    <style>
+        html, body { height: 100%; }
+        body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+    </style>
+</head>
+<body ng-app="app">
+    <div id="header">
+        <header-component></header-component>
+    </div>
+
+    <div ng-view></div>
+
+    <div id="footer">
+        <footer-component></footer-component>
+    </div>
+    <script src="routers.js"></script>
+    <script src="shared/components/header/header-component.js"></script>
+    <script src="shared/components/footer/footer-component.js"></script>
+    <script src="pages/colaborador/cadastrar-colaborador/cadastrar-colaborador-controller.js"></script>
+    <script src="pages/colaborador/listar-colaboradores-hierarquia/listar-colaboradores-hierarquia-controller.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Para saber a versão das dependências da versão 3.2.1, ver abaixo -->
+	<!-- https://docs.spring.io/spring-boot/docs/current/reference/html/index.html -->
+	<!-- https://docs.spring.io/spring-boot/docs/current/reference/html/dependency-versions.html -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.2.1</version>
+	</parent>
+
+	<groupId>br.com.netdeal</groupId>
+	<artifactId>contrus</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>contrus</name>
+	<description>Controle de Usuario</description>
+	<packaging>pom</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
+	</properties>
+
+	<modules>
+		<module>contrus-infrastructure-webapi</module>
+		<module>contrus-infrastructure-data</module>
+		<module>contrus-application</module>
+		<module>contrus-domain</module>
+	</modules>
+
+	<build>
+		<finalName>${project.artifactId}</finalName>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<version>3.2.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+	</dependencies>
+
+</project>

@@ -1,0 +1,9 @@
+CREATE TABLE colaborador (
+  id BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  hierarquia_id BIGINT NOT NULL UNIQUE,
+  nome VARCHAR(200) NOT NULL,
+  senha VARCHAR(200) NOT NULL,
+  email VARCHAR(200) NULL,
+  telefone VARCHAR(20) NULL,
+  data_nascimento DATE NOT NULL
+);

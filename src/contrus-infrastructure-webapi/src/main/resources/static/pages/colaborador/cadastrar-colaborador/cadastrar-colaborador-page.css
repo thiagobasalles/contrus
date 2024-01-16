@@ -1,0 +1,51 @@
+#container-cadastrar-colaborador-page{
+    margin-top: 3vw;
+}
+#form-cadastrar-colaborador-page{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+}
+
+.form-linha-cadastrar-colaborador-page{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.campo-um-cadastrar-colaborador-page{
+    margin-left: 50px;
+    margin-right: 25px;
+}
+
+.campo-dois-cadastrar-colaborador-page{
+    margin-right: 25px;
+}
+
+#submit-form-cadastrar-colaborador-page{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+input[type=text],input[type=password],input[type=email],input[type=tel],input[type=date],select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-bottom: 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    background-color: gray;
+    color: white;
+    height: 40px;
+    width: 65px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  

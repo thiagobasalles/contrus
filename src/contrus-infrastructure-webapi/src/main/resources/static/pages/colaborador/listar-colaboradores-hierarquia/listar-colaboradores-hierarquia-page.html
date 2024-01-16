@@ -1,0 +1,24 @@
+<div id="container-listar-colaboradores-hierarquia-page">
+    <table class="tabela">
+        <tr>
+          <th>Nome</th>
+          <th>segurancaSenhaPorcentagem</th>
+          <th>labelSegurancaSenhaPorcentagem</th>
+        </tr>
+        <tr ng-repeat="colaborador in colaboradoresHierarquia">
+            <td>
+              <span ng-repeat="i in [].constructor(colaborador.valorHierarquia) track by $index">---</span>
+              {{ colaborador.nomeColaborador }}
+            </td>
+            <td>{{ colaborador.segurancaSenhaPorcentagem }}</td>
+            <td>
+              <span class="label label-ruim" ng-if="colaborador.labelSegurancaSenhaPorcentagem === 'ruim'">Ruim</span>
+              <span class="label label-mediana" ng-if="colaborador.labelSegurancaSenhaPorcentagem === 'mediana'">Mediana</span>
+              <span class="label label-bom" ng-if="colaborador.labelSegurancaSenhaPorcentagem === 'bom'">Bom</span>
+              <span class="label label-forte" ng-if="colaborador.labelSegurancaSenhaPorcentagem === 'forte'">Forte</span>
+          </td>
+        </tr>
+      </table>
+</div>
+
+<link rel="stylesheet" type="text/css" href="pages/colaborador/listar-colaboradores-hierarquia/listar-colaboradores-hierarquia-page.css">

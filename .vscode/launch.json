@@ -1,0 +1,18 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "WebApi - Production",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.com.netdeal.contrusinfrastructurewebapi.ContrusInfrastructureWebapiApplication",
+            "projectName": "contrus-infrastructure-webapi",
+            "args": "--spring.profiles.active=production",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

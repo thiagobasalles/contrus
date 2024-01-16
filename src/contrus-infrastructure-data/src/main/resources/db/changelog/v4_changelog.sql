@@ -1,0 +1,3 @@
+ALTER TABLE hierarquia
+ADD CONSTRAINT fk_hierarquia_superior_colaborador
+FOREIGN KEY (hierarquia_superior_colaborador_id) REFERENCES colaborador(id);

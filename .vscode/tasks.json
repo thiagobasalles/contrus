@@ -1,0 +1,79 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "mvnw clean-compile-install",
+            "command": "${workspaceFolder}/mvnw.cmd clean compile install -f ${workspaceFolder}/src/pom.xml",
+            "type": "shell",
+            "args": [
+            ]
+        },
+        {
+            "label": "mvnw clean",
+            "command": "${workspaceFolder}/mvnw.cmd clean -f ${workspaceFolder}/src/pom.xml",
+            "type": "shell",
+            "args": [
+            ]
+        },
+        {
+            "label": "mvnw compile",
+            "command": "${workspaceFolder}/mvnw.cmd compile -f ${workspaceFolder}/src/pom.xml",
+            "type": "shell",
+        },
+        {
+            "label": "mvnw package - deploy",
+            "type": "shell",
+            "dependsOn": [ "command - mkdir deploy", "clean", "package","command - cp webapi", "command - cp data", "command - cp domain", "command - cp application"],
+            "dependsOrder": "sequence",
+            "args": [
+            ]
+        },
+        {
+            "label": "mvnw package",
+            "type": "shell",
+            "command": "${workspaceFolder}/mvnw.cmd package -f ${workspaceFolder}/src/pom.xml ",
+            "args": [
+            ]
+        },
+        {
+            "label": "mvnw install",
+            "type": "shell",
+            "command": "${workspaceFolder}/mvnw.cmd install -f ${workspaceFolder}/src/pom.xml ",
+            "args": [
+            ]
+        },
+        {
+            "label": "command - mkdir deploy",
+            "type": "shell",
+            "command": "rmdir -r ${workspaceFolder}/deploy; mkdir ${workspaceFolder}/deploy",
+        },
+        {
+            "label": "command - cp webapi",
+            "command": "cp ${workspaceFolder}/src/contrus-infrastructure-webapi/target/contrus-infrastructure-webapi**.jar ${workspaceFolder}/deploy/",
+            "type": "shell",
+            "args": [
+            ]
+        },
+        {
+            "label": "command - cp data",
+            "command": "cp ${workspaceFolder}/src/contrus-infrastructure-data/target/contrus-infrastructure-data**.jar ${workspaceFolder}/deploy/",
+            "type": "shell",
+            "args": [
+            ]
+        },
+        {
+            "label": "command - cp domain",
+            "command": "cp ${workspaceFolder}/src/contrus-domain/target/contrus-domain**.jar ${workspaceFolder}/deploy/",
+            "type": "shell",
+            "args": [
+            ]
+        },
+        {
+            "label": "command - cp application",
+            "command": "cp ${workspaceFolder}/src/contrus-application/target/contrus-application**.jar ${workspaceFolder}/deploy/",
+            "type": "shell",
+            "args": [
+            ]
+        }
+    ]
+}

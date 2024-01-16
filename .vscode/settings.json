@@ -1,0 +1,19 @@
+{
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.jdt.ls.java.home": "C:/workspace/jdk/adoptium/jdk-21.0.1+12",
+    "spring-boot.ls.java.home": "C:/workspace/jdk/adoptium/jdk-21.0.1+12",
+    "java.configuration.runtimes": [
+        {
+            "default": true,
+            "name": "JavaSE-21",
+            "path": "C:/workspace/jdk/adoptium/jdk-21.0.1+12",
+        }
+    ],
+    "java.debug.settings.onBuildFailureProceed": true,
+    
+    "terminal.integrated.env.windows": {
+        "JAVA_HOME": "C:/workspace/jdk/adoptium/jdk-21.0.1+12",
+        "Path": "${env:Path};C:/workspace/jdk/adoptium/jdk-21.0.1+12/bin"
+    },
+}

@@ -1,0 +1,45 @@
+<div id="container-cadastrar-colaborador-page">
+    <form id="form-cadastrar-colaborador-page" ng-submit="enviarFormulario()">
+        <div class="form-linha-cadastrar-colaborador-page">
+            <div class="campo-um-cadastrar-colaborador-page">    
+                <label for="fnome">Nome</label>
+                <input type="text" id="fnome" name="nome" ng-model="colaborador.nome">
+            </div>
+            <div class="campo-dois-cadastrar-colaborador-page">    
+                <label for="fsenha">Senha</label>
+                <input type="password" id="fsenha" name="senha" ng-model="colaborador.senha">
+            </div>
+        </div>
+        <div class="form-linha-cadastrar-colaborador-page">
+            <div class="campo-um-cadastrar-colaborador-page">    
+                <label for="femail">Email</label>
+                <input type="email" id="femail" name="email" ng-model="colaborador.email">
+            </div>
+            <div class="campo-dois-cadastrar-colaborador-page">    
+                <label for="ftel">Telefone</label>
+                <input type="tel" id="ftel" name="tel" ng-change="aplicarMascaraTelefoneCelular()" ng-model="colaborador.telefone">
+            </div>
+        </div>
+        <div class="form-linha-cadastrar-colaborador-page">
+            <div class="campo-um-cadastrar-colaborador-page">    
+                <label for="fdataNascimento">Data de Dascimento</label>
+                <input type="date" id="fdataNascimento" name="dataNascimento" ng-model="colaborador.dataNascimento">
+            </div>
+        </div>
+        <div class="form-linha-cadastrar-colaborador-page">
+            <div class="campo-um-cadastrar-colaborador-page">    
+                <label for="fcolaboradorHierarquiaSuperior">Superior</label>
+                <select name="colaboradorHierarquiaSuperiorId" id="fcolaboradorHierarquiaSuperior" ng-model="colaborador.colaboradorId">
+                    <option value="0">Nenhum</option>
+                    <option ng-repeat="colaborador in colaboradores" value="{{ colaborador.colaboradorId }}">{{ colaborador.nomeColaborador }}</option>
+                  </select>
+            </div>
+            <div id="submit-form-cadastrar-colaborador-page">
+                <input type="submit" value="Enviar">
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="pages/colaborador/cadastrar-colaborador/cadastrar-colaborador-page.css">
