@@ -30,9 +30,9 @@
             <div class="campo-um-cadastrar-colaborador-page">    
                 <label for="fcolaboradorHierarquiaSuperior">Superior</label>
                 <select name="colaboradorHierarquiaSuperiorId" id="fcolaboradorHierarquiaSuperior" ng-model="colaborador.colaboradorId">
-                    <option value="0">Nenhum</option>
+                    <option value="0" selected>Nenhum</option>
                     <option ng-repeat="colaborador in colaboradores" value="{{ colaborador.colaboradorId }}">{{ colaborador.nomeColaborador }}</option>
-                  </select>
+                </select>
             </div>
             <div id="submit-form-cadastrar-colaborador-page">
                 <input type="submit" value="Enviar">

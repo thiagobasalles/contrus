@@ -12,7 +12,7 @@ app.controller('CadastrarColaboradorController', function($scope, $http) {
         telefone: '',
         email: '',
         dataNascimento: '',
-        colaboradorId: ''
+        colaboradorId: 0
     };
 
     function buscarListaColaboradoresHierarquia() {
